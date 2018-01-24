@@ -19,7 +19,6 @@ export class HomePage {
   }
 
   reproducir(animal: Animal){
-    console.log(animal);
     this.pauseAudio(animal);
 
     if (animal.reproduciendo) {
@@ -39,7 +38,7 @@ export class HomePage {
   private pauseAudio(animalSeleccionado: Animal) {
     clearTimeout(this.audioTiempo);
     this.audio.pause();
-    this.audio.currentTime = 0;
+    //this.audio.currentTime = 0;
 
     for (let animal of this.animales) {
       if (animal.nombre != animalSeleccionado.nombre) {
