@@ -27,7 +27,6 @@ export class HomePage {
       return;
     }
 
-
     this.audio.src = animal.audio;
     this.audio.load();
     this.audio.play();
