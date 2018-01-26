@@ -29,8 +29,8 @@
           <img [src]="animal.imagen">
         </ion-avatar>
         <h2>{{animal.nombre}}</h2>
-        <ion-icon *ngIf="!animal.reproduciendo" name="play" item-right></ion-icon>
-        <ion-icon *ngIf="animal.reproduciendo" name="pause" item-right></ion-icon>
+        <ion-icon *ngIf="!animal.reproduciendo && !ordenando" name="play" item-right></ion-icon>
+        <ion-icon *ngIf="animal.reproduciendo && !ordenando" name="pause" item-right></ion-icon>
       </ion-item>
       <ion-item-options side="right">
         <button ion-button color="danger" (click)="borrarAnimal(i)">
